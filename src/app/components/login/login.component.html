@@ -1,0 +1,35 @@
+<main role="main" class="container">
+  <div class="my-3 p-3 bg-white rounded">
+    <div class="bd-example">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address is <b
+              [innerHTML]="isEmailValid ? 'valid' : 'invalid'"></b></label>
+          <input type="email" class="form-control" #email id="email" name="password"
+            (input)="validate($event.target.value,'email')">
+          <small id="emailHelp" class="form-text text-muted">Email must be email format</small>
+        </div>
+        <div class="form-group ">
+          <label for="exampleInputPassword1">Password is <b
+              [innerHTML]="isPassValid ? 'valid' : 'invalid'"></b></label>
+          <input type="password" class="form-control" #password id="password" name="password"
+            (input)="validate($event.target.value,'password')">
+          <small id="emailHelp" class="form-text text-muted">Password contain at least one lowercase letter, one
+            uppercase letter, one numeric digit, and one special character and must be between 6 to 10 characters which
+          </small>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="button" class="btn btn-block btn-primary" (click)="login(email.value,password.value)" value="Login">
+          </div>
+          <div class="col">
+            <input type="button" class="btn btn-block btn-secondary" (click)="goOn()" value="Go On As TOPRAK"/>
+          </div>
+        </div>
+        <div class="alert alert-danger" style="margin-top: 50px;" role="alert" *ngIf="isSubmit">
+          {{msg}}
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,28 @@
+<main role="main" class="container">
+    <div class="my-3 p-3 bg-white rounded">
+        <h6 class="border-bottom border-gray pb-2 mb-0" style="text-align: right;">
+            <div *ngIf="cart.length != 0">
+                <span style="float: left;">
+                    <span class="pointer" style="margin-right: 20px;"
+                        (click)="logOut()">LogOut</span><b>{{userName}}'s</b> Shopping Cart <span
+                        class="badge badge-info">{{cart.length}}
+                    </span>&nbsp;<span class="badge badge-dark">&nbsp;$&nbsp;{{getTotalPrice(cart)}}&nbsp;</span>
+                    <span class="pointer" style="margin-left: 20px;" (click)="emptyCart()">Empty Cart</span>
+                </span>
+                <a routerLink="payment">
+                    Go to Cart <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </div>
+            <div *ngIf="cart.length == 0">
+
+                <span style="float: left;">
+                    <span class="pointer" style="margin-right: 20px;"
+                        (click)="logOut()">LogOut</span><b>{{userName}}</b>
+                </span>
+                Your cart is empty
+            </div>
+            <!-- <i class="fa fa-shopping-cart"></i> -->
+        </h6>
+        <router-outlet></router-outlet>
+    </div>
+</main>

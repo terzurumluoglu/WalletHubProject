@@ -1,0 +1,12 @@
+<div class="card">
+  <img [src]="product?.image" class="card-img-top" alt="image">
+  <div class="card-body">
+    <h5 class="card-title">{{product?.name}}
+      <span style="font-weight: bold; font-size: 12px; color: crimson;">${{product?.price}}</span>
+    </h5>
+    <p class="card-text">{{product?.description}}</p>
+    <input [class]="lastProductsCount(p?.id) != 0 ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-danger disabled'"
+      style="cursor: pointer; float: right;" role="button" (click)="add2Cart(product)"
+      [value]="lastProductsCount() !=0 ? 'Add to Cart' : 'Out of Stock'" />
+  </div>
+</div>

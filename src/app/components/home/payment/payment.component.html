@@ -1,0 +1,59 @@
+<div class="card">
+    <table class="table table-hover shopping-cart-wrap">
+        <thead class="text-muted">
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col" width="120">Quantity</th>
+                <th scope="col" width="120">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of datas">
+                <td>
+                    <figure class="media">
+                        <div class="img-wrap"><img [src]="data?.image" class="img-thumbnail img-sm"></div>
+                        <figcaption class="media-body">
+                            <h6 class="title text-truncate">{{data?.name}}</h6>
+                            <dl class="param param-inline small">
+                                <dt>{{data?.description}}</dt>
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <span class="price">{{data?.quantity}}</span>
+                    </div> <!-- price-wrap .// -->
+                    <!-- <input type="text" class="form-control" disabled/> -->
+                </td>
+                <td>
+                    <div class="price-wrap">
+                        <var class="price">$ {{data?.price}}</var>
+                    </div> <!-- price-wrap .// -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!-- card.// -->
+<div class="row" style="margin:0px -15px 0px -15px !important;">
+    <div class="col-6" style="text-align: right;">
+        <div style="margin-top: 30px;">
+            <span>Amount to paid</span>
+        </div>
+    </div>
+    <div class="col-6">
+        <form #formV>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="amount"
+                    name="amount" id="amount" (ngModelChange)="amount=$event" appAutoFormat>
+                <div class="input-group-append">
+                    <input style="width: 50px;" class="input-group-text" value="00"/>
+                </div>
+            </div>
+            <input type="button" class="btn btn-primary btn-block float-right" value="Buy"/>
+        </form>
+    </div>
+</div>

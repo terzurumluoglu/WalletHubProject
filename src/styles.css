@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding-top: 0px !important;
+    font-family: 'ProximaNova';
+}
+.row{
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-Black.otf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-BlackIt.otf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-ExtrabldIt.otf);
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-Extrabold.otf);
+    font-weight: bolder;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-LightItalic.otf);
+    font-weight: lighter;
+    font-style: italic;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-Reg.otf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-Thin.otf);
+    font-weight: lighter;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(assets/fonts/ProximaNova-ThinIt.otf);
+    font-weight: lighter;
+    font-style: italic;
+}
